@@ -3,115 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiface Flashcard</title>
+    <title>Alan Wang</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Multiface Flashcard</h1>
-        <p>Create and study multi-face flashcards</p>
+        <h1>Alan Wang</h1>
+        <div class="button-container">
+            <button class="top-btn" id="home-btn">
+                <i class="fas fa-plus"></i> Home
+            </button>
+            <button class="top-btn" id="projects-btn">
+                <i class="fas fa-plus"></i> Projects
+            </button>
+            <button class="top-btn" id="contact-btn">
+                <i class="fas fa-plus"></i> Contact
+            </button>
+        </div>
     </header>
 
     <!-- Main Container -->
     <div class="container">
-        <!-- Main Page -->
-        <div class="page main-page active" id="main-page">
-            <div class="description">
-                <p>Multiface Flashcard helps you create and study flashcards with multiple faces. Perfect for learning languages, formulas, or any subject that requires memorization.</p>
-                <p>Create your own flashcards with as many faces as you need, then test your knowledge by playing through them.</p>
-            </div>
-            <!-- Buttons -->
-            <div class="button-container">
-                <button class="btn" id="create-btn">
-                    <i class="fas fa-plus"></i> Create New Flashcards
-                </button>
-                <button class="btn btn-outline" id="play-btn">
-                    <i class="fas fa-play"></i> Play Existing Flashcards
-                </button>
-                <button class="btn btn-outline" id="edit-btn">
-                    <i class="fas fa-edit"></i> Edit Existing Flashcards
-                </button>
-                <button class="btn btn-outline" id="download-btn">
-                    <i class="fas fa-download"></i> Download Flashcards
-                </button>
-            </div>
-        </div>
-
-        <!-- Create Page -->
-        <div class="page create-page" id="create-page">
-            <a href="#" class="back-btn" id="back-from-create">
-                <i class="fas fa-arrow-left"></i> Back to Main
-            </a>
-            <h2>Create New Flashcards</h2>
-            
-            <div class="form-group">
-                <label for="topic-name">Topic Name</label>
-                <input type="text" id="topic-name" placeholder="Enter a name for this flashcard set">
-            </div>
-            
-            <div class="cards-container" id="cards-container">
-                <!-- Cards will be added here -->
-            </div>
-            
-            <div class="action-buttons">
-                <button class="btn" id="add-card-btn">
-                    <i class="fas fa-plus"></i> Add New Card
-                </button>
-                <button class="btn" id="save-topic-btn">
-                    <i class="fas fa-save"></i> Save Topic
-                </button>
-                <button class="btn btn-outline" id="clear-create-btn">
-                    <i class="fas fa-eraser"></i> Clear All
-                </button>
-                <button class="btn btn-outline" id="upload-btn">
-                    <i class="fas fa-upload"></i> Upload JSON
-                </button>
-                <input type="file" id="json-upload" accept=".json" style="display: none;">
-            </div>
-        </div>
-
-        <!-- Play Page -->
-        <div class="page play-page" id="play-page">
-            <a href="#" class="back-btn" id="back-from-play">
-                <i class="fas fa-arrow-left"></i> Back to Main
-            </a>
-            <h2>Play Flashcards</h2>
-            
-            <div class="form-group">
-                <label for="topic-select">Select a Topic</label>
-                <select id="topic-select" class="topic-select">
-                    <option value="">-- Select a topic --</option>
-                    <!-- Topics will be added here -->
-                </select>
-            </div>
-            
-            <div id="play-area">
-                <!-- Flashcards will be displayed here -->
-                <div class="no-topics" id="no-topics-message">
-                    <i class="fas fa-inbox"></i>
-                    <h3>No Flashcards Available</h3>
-                    <p>Create some flashcards first to play with them</p>
+        <!-- Home Page -->
+        <div class="page home-page active" id="home-page">
+            <!-- About Me Section -->
+            <section class="about-section">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hi, I'm Yutong, also known as Alan. In the upcoming fall, I will be a student at the University of Toronto studying Engineering Science. I have recently graduated from St. Theresa of Lisieux Catholic High School. I enjoy problem-solving and love to deploy creativity in forming rigorous solutions.</p>
+                        <p>During high school, I have mainly engaged in competitive mathematics. In my senior years, I consistently obtained honour roll on the Canadian Senior Mathematics Contests and qualified for the American Invitational Mathematics Examinations. I was also involved in robotics and competitive programming, where I mainly used C++ and Python. Recently, I have been more focused on web development and Javascript, as seen in my recent projects.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="alanwang.jpg" alt="Alan Wang">
+                    </div>
                 </div>
+            </section>
+        </div>
+
+        <!-- Projects Page -->
+        <div class="page projects-page" id="projects-page">
+            <div class="projects-container">
+                <!-- Project Panel 1 -->
+                <a href="https://microsoftedge.microsoft.com/addons/detail/antiprocrastination/ekkbgffldoganjelgglceikjgdackgnn" class="project-panel" target="_blank">
+                    <div class="project-image">
+                        <img src="anti-procrastination-screenshot.png" alt="Anti-Procrastination Extension">
+                    </div>
+                    <div class="project-content">
+                        <h3>Anti-Procrastination Extension</h3>
+                        <p>This is a chromium extension that tracks online productivity and removes distractions. It is mainly made with HTML and Javascript.</p>
+                    </div>
+                </a>
+                
+                <!-- Project Panel 2 -->
+                <a href="https://github.com/alanwang981/multiface-flashcard" class="project-panel" target="_blank">
+                    <div class="project-image">
+                        <img src="flashcard-screenshot.png" alt="Multiface Flashcard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Multiface Flashcard</h3>
+                        <p>This is a flashcard website that allows for multi-sided flashcards. It is mainly made with HTML and Javascript.</p>
+                    </div>
+                </a>
+                
+                <!-- To be added -->
             </div>
         </div>
 
-        <!-- Edit Page -->
-        <div class="page edit-page" id="edit-page">
-            <a href="#" class="back-btn" id="back-from-edit">
-                <i class="fas fa-arrow-left"></i> Back to Main
-            </a>
-            <h2>Edit Flashcards</h2>
-            
-            <div id="edit-topics-container">
-                <!-- Topics will be added here -->
+        <!-- Contact Page -->
+        <div class="page contacts-page" id="contacts-page">
+            <div class="description">
+                <h2>Contact me!</h2>
+                <p>Feel free to reach out through any of these methods:</p>
+                <p>Email: <a href="mailto:alanwyt.wang@mail.utoronto.ca" class="contact-link">alanwyt.wang@mail.utoronto.ca</a></p>
+                <p>Github: <a href="https://github.com/alanwang981" target="_blank" class="contact-link">https://github.com/alanwang981</a></p>
+                <p>Linkedin: <a href="https://www.linkedin.com/in/yutong-wang-2146b8370/" target="_blank" class="contact-link">https://www.linkedin.com/in/yutong-wang-2146b8370/</a></p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>Your flashcards are saved locally in your browser</p>
+        <p>Last updated: 6/22/2025</p>
     </footer>
 
     <!-- link to script -->
